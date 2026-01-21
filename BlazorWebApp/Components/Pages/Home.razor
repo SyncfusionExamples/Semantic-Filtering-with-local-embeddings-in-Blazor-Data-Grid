@@ -1,0 +1,105 @@
+﻿@page "/" 
+@inject LocalEmbedder embedder 
+
+<SfGrid @ref="@gridObj" TValue="MedicalRecord" DataSource="@MedicalRecords" Query="_gridQuery" EnableAltRow=true AllowTextWrap=true> 
+    <SfToolbar> 
+        <ToolbarItems> 
+            <ToolbarItem Type="ItemType.Input"> 
+                <Template> 
+                    <SfTextBox Placeholder="Search here" @bind-Value="@SearchText"></SfTextBox> 
+                    <SfButton Content="Smart Search" @onclick="OnSearchClicked"></SfButton> 
+                </Template> 
+            </ToolbarItem> 
+        </ToolbarItems> 
+    </SfToolbar> 
+    <GridColumns>
+        <GridColumn Field=@nameof(MedicalRecord.RecordID) TextAlign="TextAlign.Right" HeaderText="Record ID" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(MedicalRecord.PatientID) TextAlign="TextAlign.Right" HeaderText="Patient ID" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(MedicalRecord.Symptoms) HeaderText="Symptoms" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(MedicalRecord.Diagnosis) HeaderText="Diagnosis" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(MedicalRecord.DoctorDetails) HeaderText="Doctor Information" Width="140"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+<style>
+    .search-textbox {
+        width: 30%;
+        display: flex;
+        align-items: center;
+    }
+
+    .e-control-wrapper {
+        margin-right: 7px;
+    }
+
+    .e-toolbar-items {
+        margin-top: 4px;
+    }
+</style>
+@code
+{
+    private SfGrid<MedicalRecord> gridObj;
+    public List<MedicalRecord> MedicalRecords { get; set; } 
+    public string SearchText { get; set; }
+    public double SimilarityThreshold = 0.6;
+    private Query _gridQuery = new Query();
+    public Dictionary<int?,EmbeddingF32> RecordEmbeddings = new Dictionary<int?, EmbeddingF32>();
+    protected override void OnInitialized ()
+    {
+        MedicalRecords = new List<MedicalRecord>
+        {
+            new MedicalRecord { RecordID = 1, PatientID = 615001, Symptoms = "Fever, cough, and shortness of breath.", Diagnosis = "Pneumonia", DoctorDetails = "Dr. John Smith - Specialized in Pulmonology" },
+            new MedicalRecord { RecordID = 2, PatientID = 615002, Symptoms = "Severe headache, nausea, and sensitivity to light.", Diagnosis = "Migraine", DoctorDetails = "Dr. Alice Brown - Specialized in Neurology" },
+            new MedicalRecord { RecordID = 3, PatientID = 615003, Symptoms = "Fatigue, weight gain, and hair loss.", Diagnosis = "Hypothyroidism", DoctorDetails = "Dr. Robert Johnson - Specialized in Endocrinology" },
+            new MedicalRecord { RecordID = 4, PatientID = 615004, Symptoms = "Chest pain, shortness of breath, and sweating.", Diagnosis = "Heart Attack", DoctorDetails = "Dr. Michael Williams - Specialized in Cardiology" },
+            new MedicalRecord { RecordID = 5, PatientID = 615005, Symptoms = "Joint pain, stiffness, and swelling.", Diagnosis = "Arthritis", DoctorDetails = "Dr. Mary Jones - Specialized in Rheumatology" },
+            new MedicalRecord { RecordID = 6, PatientID = 615006, Symptoms = "Abdominal pain, bloating, and irregular bowel movements.", Diagnosis = "Irritable Bowel Syndrome (IBS)", DoctorDetails = "Dr. Patricia Garcia - Specialized in Gastroenterology" },
+            new MedicalRecord { RecordID = 7, PatientID = 615007, Symptoms = "Frequent urination, excessive thirst, and unexplained weight loss.", Diagnosis = "Diabetes", DoctorDetails = "Dr. Robert Johnson - Specialized in Endocrinology" },
+            new MedicalRecord { RecordID = 8, PatientID = 615008, Symptoms = "Persistent sadness, loss of interest, and fatigue.", Diagnosis = "Depression", DoctorDetails = "Dr. Linda Martinez - Specialized in Psychiatry" },
+            new MedicalRecord { RecordID = 9, PatientID = 615009, Symptoms = "Shortness of breath, wheezing, and chronic cough.", Diagnosis = "Asthma", DoctorDetails = "Dr. John Smith - Specialized in Pulmonology" },
+            new MedicalRecord { RecordID = 10, PatientID = 615010, Symptoms = "High blood pressure, headaches, and blurred vision.", Diagnosis = "Hypertension", DoctorDetails = "Dr. Michael Williams - Specialized in Cardiology" }
+        }; 
+        foreach (var record in MedicalRecords)
+        {
+            var inputText = $"{record.DoctorDetails} {record.Symptoms} {record.Diagnosis}";
+            var embedding = embedder.Embed(inputText);
+            RecordEmbeddings.TryAdd(record.RecordID, embedding);
+        }
+
+    }
+
+    private async Task OnSearchClicked()
+    {
+        if (!string.IsNullOrEmpty(SearchText))
+        {
+            var filteredColumn = await gridObj.GetColumnByFieldAsync("Symptoms");
+            var queryVector = embedder.Embed(SearchText);
+            var filteredRecords = MedicalRecords.Where(p => LocalEmbedder.Similarity(RecordEmbeddings[p.RecordID], queryVector) > SimilarityThreshold).ToList();
+            _gridQuery = await RenderQueryForFilteredData(filteredRecords, filteredColumn);
+        }
+        else
+        {
+            _gridQuery = new Query();
+        }
+    }
+
+    public async Task<Query> RenderQueryForFilteredData(IEnumerable<object> filteredData, GridColumn column)
+    {
+        Query query;
+        List<WhereFilter> inputFilters = new List<WhereFilter>();
+        foreach (var data in filteredData)
+        {
+            var filteredValue = data.GetType()?.GetProperty(column.Field)?.GetValue(data);
+            inputFilters.Add(new WhereFilter() { Field = column.Field, Operator = "contains", value = filteredValue, IgnoreCase = true, Condition = "or" });
+        }
+        return query = new Query().Where(WhereFilter.Or(inputFilters));
+    }
+    public class MedicalRecord
+    {
+        public int? RecordID { get; set; }
+        public int? PatientID { get; set; }
+        public string? DoctorDetails { get; set; }
+        public string? Symptoms { get; set; }
+        public string? Diagnosis { get; set; }
+    }
+}
