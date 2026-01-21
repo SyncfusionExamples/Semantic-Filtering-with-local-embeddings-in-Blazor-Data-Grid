@@ -1,0 +1,137 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\VS\\Blazor\\Samples\\Grid\\SemanticFiltering\\BlazorApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B85F8537-9241-4BBF-A330-A9CDCAEFC6BC}|BlazorApp.csproj|d:\\vs\\blazor\\samples\\grid\\semanticfiltering\\blazorapp\\wwwroot\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{B85F8537-9241-4BBF-A330-A9CDCAEFC6BC}|BlazorApp.csproj|solutionrelative:wwwroot\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B85F8537-9241-4BBF-A330-A9CDCAEFC6BC}|BlazorApp.csproj|d:\\vs\\blazor\\samples\\grid\\semanticfiltering\\blazorapp\\blazorapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{B85F8537-9241-4BBF-A330-A9CDCAEFC6BC}|BlazorApp.csproj|solutionrelative:blazorapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B85F8537-9241-4BBF-A330-A9CDCAEFC6BC}|BlazorApp.csproj|d:\\vs\\blazor\\samples\\grid\\semanticfiltering\\blazorapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B85F8537-9241-4BBF-A330-A9CDCAEFC6BC}|BlazorApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B85F8537-9241-4BBF-A330-A9CDCAEFC6BC}|BlazorApp.csproj|d:\\vs\\blazor\\samples\\grid\\semanticfiltering\\blazorapp\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B85F8537-9241-4BBF-A330-A9CDCAEFC6BC}|BlazorApp.csproj|solutionrelative:components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B85F8537-9241-4BBF-A330-A9CDCAEFC6BC}|BlazorApp.csproj|d:\\vs\\blazor\\samples\\grid\\semanticfiltering\\blazorapp\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B85F8537-9241-4BBF-A330-A9CDCAEFC6BC}|BlazorApp.csproj|solutionrelative:components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B85F8537-9241-4BBF-A330-A9CDCAEFC6BC}|BlazorApp.csproj|d:\\vs\\blazor\\samples\\grid\\semanticfiltering\\blazorapp\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B85F8537-9241-4BBF-A330-A9CDCAEFC6BC}|BlazorApp.csproj|solutionrelative:components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B85F8537-9241-4BBF-A330-A9CDCAEFC6BC}|BlazorApp.csproj|d:\\vs\\blazor\\samples\\grid\\semanticfiltering\\blazorapp\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B85F8537-9241-4BBF-A330-A9CDCAEFC6BC}|BlazorApp.csproj|solutionrelative:components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "app.css",
+              "DocumentMoniker": "D:\\VS\\Blazor\\Samples\\Grid\\SemanticFiltering\\BlazorApp\\wwwroot\\app.css",
+              "RelativeDocumentMoniker": "wwwroot\\app.css",
+              "ToolTip": "D:\\VS\\Blazor\\Samples\\Grid\\SemanticFiltering\\BlazorApp\\wwwroot\\app.css",
+              "RelativeToolTip": "wwwroot\\app.css",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-01-21T11:56:31.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BlazorApp",
+              "DocumentMoniker": "D:\\VS\\Blazor\\Samples\\Grid\\SemanticFiltering\\BlazorApp\\BlazorApp.csproj",
+              "RelativeDocumentMoniker": "BlazorApp.csproj",
+              "ToolTip": "D:\\VS\\Blazor\\Samples\\Grid\\SemanticFiltering\\BlazorApp\\BlazorApp.csproj",
+              "RelativeToolTip": "BlazorApp.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-01-21T11:55:05.364Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "D:\\VS\\Blazor\\Samples\\Grid\\SemanticFiltering\\BlazorApp\\Components\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "Components\\Layout\\MainLayout.razor",
+              "ToolTip": "D:\\VS\\Blazor\\Samples\\Grid\\SemanticFiltering\\BlazorApp\\Components\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "Components\\Layout\\MainLayout.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-21T11:53:41.443Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Home.razor",
+              "DocumentMoniker": "D:\\VS\\Blazor\\Samples\\Grid\\SemanticFiltering\\BlazorApp\\Components\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Home.razor",
+              "ToolTip": "D:\\VS\\Blazor\\Samples\\Grid\\SemanticFiltering\\BlazorApp\\Components\\Pages\\Home.razor",
+              "RelativeToolTip": "Components\\Pages\\Home.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-05T10:47:04.719Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "App.razor",
+              "DocumentMoniker": "D:\\VS\\Blazor\\Samples\\Grid\\SemanticFiltering\\BlazorApp\\Components\\App.razor",
+              "RelativeDocumentMoniker": "Components\\App.razor",
+              "ToolTip": "D:\\VS\\Blazor\\Samples\\Grid\\SemanticFiltering\\BlazorApp\\Components\\App.razor",
+              "RelativeToolTip": "Components\\App.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-05T10:45:24.868Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\VS\\Blazor\\Samples\\Grid\\SemanticFiltering\\BlazorApp\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\VS\\Blazor\\Samples\\Grid\\SemanticFiltering\\BlazorApp\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-05T10:44:18.599Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_Imports.razor",
+              "DocumentMoniker": "D:\\VS\\Blazor\\Samples\\Grid\\SemanticFiltering\\BlazorApp\\Components\\_Imports.razor",
+              "RelativeDocumentMoniker": "Components\\_Imports.razor",
+              "ToolTip": "D:\\VS\\Blazor\\Samples\\Grid\\SemanticFiltering\\BlazorApp\\Components\\_Imports.razor",
+              "RelativeToolTip": "Components\\_Imports.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-05T10:44:02.751Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
