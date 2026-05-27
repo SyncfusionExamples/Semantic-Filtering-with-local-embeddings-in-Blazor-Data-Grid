@@ -1,10 +1,10 @@
 # Semantic Filtering with Local Embeddings in Blazor Data Grid
 
-Semantic search for medical records using AI embeddings Blazor Grid. This sample demonstrates how to implement intelligent, context-aware data filtering without relying on external AI services.
+Semantic search for medical records using AI embeddings [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid). This sample demonstrates how to implement intelligent, context-aware data filtering without relying on external AI services.
 
 ## Overview
 
-This Blazor web application showcases how to build a semantic search experience for medical records using **local embeddings** and the **Blazor Grid** component. Rather than simple keyword matching, the search understands the meaning of query text and finds semantically similar medical information.
+This Blazor web application showcases how to build a semantic search experience for medical records using **local embeddings** and the **Blazor DataGrid** component. Rather than simple keyword matching, the search understands the meaning of query text and finds semantically similar medical information.
 
 **Key Use Case**: A healthcare data portal where physicians and staff can search medical records using natural language queries (e.g., "respiratory issues" to find records with symptoms like "shortness of breath").
 
@@ -49,7 +49,8 @@ dotnet run
 ```
 ## References
 
+- [Blazor Documentation](https://blazor.syncfusion.com/documentation/introduction)
 - [Blazor DataGrid Documentation](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app)
 - [Online DataGrid Embedding Demo](https://blazor.syncfusion.com/demos/datagrid/semantic-filtering?theme=fluent2)
-- [Blazor Documentation](https://blazor.syncfusion.com/documentation/introduction)
+
 
